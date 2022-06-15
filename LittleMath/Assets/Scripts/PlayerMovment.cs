@@ -8,7 +8,7 @@ public class PlayerMovment : MonoBehaviour
     public float forwardForce= 300;
     public float sidewaysForce = 350;
 
-    public float horizontal;
+    private float horizontal;
 
     private void Update()
     {

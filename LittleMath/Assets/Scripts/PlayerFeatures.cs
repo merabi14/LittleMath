@@ -5,9 +5,13 @@ public class PlayerFeatures : MonoBehaviour
 {
     [SerializeField]
     private PlayerMovment playermv;
-
+    int activeScene = 0; 
+    
     void OnCollisionEnter(Collision collision)
     {
+        //Get Current Lvl
+        activeScene = SceneManager.GetActiveScene().buildIndex;
+
         if (collision.collider.tag == "Obstacle")
         {
             //playermv.enabled = false;
@@ -15,10 +19,11 @@ public class PlayerFeatures : MonoBehaviour
             playermv.sidewaysForce = 0;
             playermv.forwardForce = 0;
         }
-        if (collision.collider.tag == "Finish")
+        
+        //Next Lvl
+        if (collision.collider.tag == "Finish" & activeScene < 3)
         {
-            SceneManager.LoadScene(1);
-            Debug.Log("waidaa meore turi");
+            SceneManager.LoadScene(activeScene+1);
         }
     }
 
