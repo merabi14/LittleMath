@@ -1,2 +1,2 @@
-# LittleMath
-Little and Simple Unity Game.
+# Unity & C# Developer
+language I know is sharp, so See.
