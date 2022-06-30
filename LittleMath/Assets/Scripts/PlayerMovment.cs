@@ -5,8 +5,8 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField]
     private Rigidbody rb;
 
-    public float forwardForce= 300;
-    public float sidewaysForce = 350;
+    public float forwardForce= 700;
+    public float sidewaysForce = 780;
 
     private float horizontal;
 
